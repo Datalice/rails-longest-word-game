@@ -1,0 +1,10 @@
+<%=@letters%>
+
+  <p><strong>Type your word</strong></p>
+<form action="score" method="post" data-turbo="false">
+  <input type="text" name="word">
+  <input type="submit" value="What's your word" class="btn btn-primary">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+
+</form>
